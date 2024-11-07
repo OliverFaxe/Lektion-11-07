@@ -103,14 +103,36 @@ const house = {
 // console.log(carsAllRed); // New colors
 // console.log(cars); // Old colors
 
-const numbers = [0, 1, 1, 1, 0, 1, 0];
+// const numbers = [0, 1, 1, 1, 0, 1, 0];
 
-const allOnes = numbers.filter((number) => {
-    if (number === 0) {
-        return false;
-    }
+// const allOnes = numbers.filter((number) => {
+//     if (number === 0) {
+//         return false;
+//     }
     
-    return true;
-});
+//     return true;
+// });
 
-console.log(allOnes);
+// console.log(allOnes);
+
+class Animal {
+    #name; // # Indicated a private property
+    #species;// # Indicated a private property
+
+    constructor (name, species) {
+        this.#name = name;
+        this.#species = species;
+    }
+
+    getName() {
+        return this.#name;
+    }
+
+    speak() {
+        console.log(`The animal, ${this.name} makes a sound`);
+    }
+}
+
+const myDog = new Animal("Fido", "Labrador");
+
+console.log(myDog.getName());
